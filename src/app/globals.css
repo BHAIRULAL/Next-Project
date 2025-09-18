@@ -1,0 +1,116 @@
+/* @import "tailwindcss"; */
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px;
+}
+
+
+/* form field css */
+.form-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.input-field,
+.textarea-field {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.textarea-field {
+  height: 80px;
+  resize: vertical;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.submit-button:disabled {
+  background-color: #a5d6a7; 
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.input-error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+
+.auth-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+.auth-button.sign-in {
+  background-color: #2d72d9;
+  color: #fff;
+}
+
+.auth-button.sign-in:hover {
+  background-color: #1b4f9c;
+}
+
+.auth-button.sign-out {
+  background-color: #e53935;
+  color: #fff;
+}
+
+.auth-button.sign-out:hover {
+  background-color: #c62828;
+}
